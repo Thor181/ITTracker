@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="AppointSpecialistWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ClarifationWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomerOrderCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OrderCardManager.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CustomerOrdersView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="FullDescriptionWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="OrderCard.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\OrderManagerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\AuthView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\CustomerView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SpecialistView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="AppointSpecialistWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ClarifationWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomerOrderCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OrderCardManager.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CustomerOrdersView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="FullDescriptionWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="OrderCard.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OrderManagerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AuthView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\CustomerView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SpecialistView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CustomResourceDictionary.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

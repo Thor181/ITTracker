@@ -1,0 +1,6 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="GlobalBackgroundColor" Color="#FF2F2F2F"></SolidColorBrush>
+    <SolidColorBrush x:Key="GlobalForegroundColor" Color="White"></SolidColorBrush>
+    <SolidColorBrush x:Key="GlobalCardsBackgroundColor" Color="#979797"></SolidColorBrush>
+</ResourceDictionary>

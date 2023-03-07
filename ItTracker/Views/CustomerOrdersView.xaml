@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="ITTracker.CustomerOrdersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ITTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Background="{StaticResource GlobalBackgroundColor}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="68"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="290"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0" >
+
+            <Button
+                x:Name="backButton" Margin="5"
+                VerticalAlignment="Top" HorizontalAlignment="Left" 
+                Style="{StaticResource MaterialDesignIconButton}"
+                ToolTip="Назад"
+                Click="backButton_Click">
+                <materialDesign:PackIcon
+                    Kind="ArrowLeft" />
+            </Button>
+            <TextBox x:Name="searchTextbox"
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                Foreground="White"
+                Margin="5"
+                VerticalAlignment="Top"
+                AcceptsReturn="True"
+                TextWrapping="Wrap"
+                MaxWidth="150"
+                materialDesign:HintAssist.Hint="Введите Ваш Id" />
+            <Button x:Name="searchButton" Margin="0,0,0,12" Width="90" Content="Поиск" Click="searchButton_Click"></Button>
+        </StackPanel>
+        <ScrollViewer Grid.Column="1" Grid.RowSpan="2">
+            <StackPanel x:Name="customerOrdersStackPanel" />
+
+        </ScrollViewer>
+    </Grid>
+</UserControl>

@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="ITTracker.OrderCardManager"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ITTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" 
+             HorizontalAlignment="Stretch" Height="200" Margin="7">
+    <Grid>
+        <materialDesign:Card
+              Background="{StaticResource GlobalCardsBackgroundColor}"
+              Foreground="{StaticResource GlobalForegroundColor}"
+              HorizontalAlignment="Stretch"
+              Padding="8"
+              UniformCornerRadius="8" 
+              materialDesign:ShadowAssist.ShadowDepth="Depth3" >
+            <StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="5,0">
+                    <TextBlock FontSize="15"> <Bold>Заказчик:</Bold></TextBlock>
+                    <TextBlock x:Name="cardCustomerFullNameTextblock" Margin="3" TextWrapping="Wrap" Text="FULLNAME"/>
+                </StackPanel>
+                
+                <Button x:Name="cardDescriptionButton" Margin="5" Click="cardDescriptionButton_Click" ></Button>
+                <Button x:Name="cardClarifyInfoButton" Margin="5" Content="На уточнение" Width="130" Click="cardClarifyInfoButton_Click"  ></Button>
+                <Button x:Name="cardAppointTaskButton" Margin="5" Content="Назначить исполнителя" Width="190" Click="cardAppointTaskButton_Click" >
+                    
+                </Button>
+                <Button x:Name="cardContainerDataCard" Margin="5" Visibility="Hidden"></Button>
+            </StackPanel>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>

@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="ITTracker.AuthView"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ITTracker"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" d:DesignWidth="400" HorizontalAlignment="Center">
+    <UserControl.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource GlobalForegroundColor}"></Setter>
+        </Style>
+    </UserControl.Resources>
+    <Grid Background="{StaticResource GlobalBackgroundColor}">
+        <StackPanel Margin="70,10" VerticalAlignment="Center">
+            <ComboBox x:Name="employeesCombobox" Margin="0,10" Foreground="{StaticResource GlobalForegroundColor}" >
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0}: {1} {2}" >
+                                    <Binding Path="Role"/>
+                                    <Binding Path="LastName"/>
+                                    <Binding Path="FirstName"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <PasswordBox
+                  x:Name="passwordBox"
+                  materialDesign:HintAssist.Hint="Пароль..."
+                  materialDesign:HintAssist.Foreground="Green"
+                  materialDesign:TextFieldAssist.UnderlineBrush="Green"
+                  Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" Foreground="{StaticResource GlobalForegroundColor}"/> 
+            <Button x:Name="enterButton" Margin="0,10" Width="150" Content="Войти" Click="enterButton_Click"></Button>
+            <Button x:Name="enterAsGuestButton" Width="150" Content="Войти как гость" Click="enterAsGuestButton_Click"></Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
